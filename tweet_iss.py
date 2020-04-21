@@ -8,6 +8,11 @@ import urllib2
 
 url = 'http://api.open-notify.org/iss-now.json'
 
+sat = input('What spacecraft are you looking for?')
+if sat == ISS:
+  api.update_status(status=tweetStr)
+  
+
 response = urllib2.urlopen(url)
 result = json.loads(response.read()
 location = result['iss_position']
@@ -15,10 +20,11 @@ lat = (location['latitude'])
 lon = (location['longitude'])
 
 tweetStr = 'The ISS current longitude/latitude is: ' + lon + ' & ' + lat
-
+                    
 apiKey = 
 apiSecret = 
 accessToken = 
 accessTokenSecret = 
 
 api = Twython(apiKey,apiSecret,accessToken,accessTokenSecret)
+                  
