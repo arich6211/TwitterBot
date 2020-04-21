@@ -9,7 +9,7 @@ import urllib2
 url = 'http://api.open-notify.org/iss-now.json'
 
 sat = input('What spacecraft are you looking for?')
-if sat == ISS:
+if sat == "ISS":
   api.update_status(status=tweetStr)
   
 
